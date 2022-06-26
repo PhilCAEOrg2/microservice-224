@@ -125,6 +125,49 @@ public class Res extends RESTService {
     return null;
   }
 
+  /**
+   * 
+   * testtest
+   *
+   * 
+   * @param id  a String
+   * 
+   * @return Response 
+   * 
+   */
+  @GET
+  @Path("/test/{id}")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = "resnotfound")
+  })
+  @ApiOperation(value = "testtest", notes = " ")
+  public Response testtest(@PathParam("id") String id) {
+
+
+
+
+     
+    // service method invocations
+
+     
+
+
+
+
+    // resnotfound
+    boolean resnotfound_condition = true;
+    if(resnotfound_condition) {
+      JSONObject res = new JSONObject();
+
+      
+
+      return Response.status(HttpURLConnection.HTTP_NOT_FOUND).entity(res.toJSONString()).build();
+    }
+    return null;
+  }
+
 
 
   }
